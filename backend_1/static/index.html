@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS System</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-area">
+            <input type="text" id="product_code" placeholder="商品コードを入力">
+            <button onclick="lookupProduct()">商品コード読み込み</button>
+        </div>
+        <div class="product-info">
+            <input type="text" id="product_name" placeholder="商品名">
+            <input type="text" id="product_price" placeholder="単価">
+        </div>
+        <div class="purchase-area">
+            <button onclick="addToCart()">追加</button>
+            <ul id="purchase_list"></ul>
+            <button onclick="purchase()">購入</button>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
+
+

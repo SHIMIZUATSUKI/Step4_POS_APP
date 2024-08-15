@@ -27,7 +27,7 @@ jobs:
       - name: Zip backend artifact for deployment
         run: |
           cd backend_2
-          zip -r backend_2.zip .
+          zip -r backend_2.zip . -x "venv/*" "__pycache__/*"
 
       - name: Upload backend artifact
         uses: actions/upload-artifact@v3
@@ -100,3 +100,4 @@ jobs:
           app-name: 'tech0-gen-6-step4-studentwebapp-12'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZURE_FRONTEND_PUBLISH_PROFILE }}
+
